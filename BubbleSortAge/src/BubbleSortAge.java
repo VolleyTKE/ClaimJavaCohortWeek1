@@ -1,5 +1,7 @@
 
 import java.util.Arrays;
+//sorts and integer array dsc
+
 
 public class BubbleSortAge {
 

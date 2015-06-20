@@ -8,7 +8,7 @@ package palindrome;
 import java.util.Arrays;
 
 /**
- *
+ * checks if a word or sentence is a palindrome
  * @author Chris
  */
 public class Palindrome {

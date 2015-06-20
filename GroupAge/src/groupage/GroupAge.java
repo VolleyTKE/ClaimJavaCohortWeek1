@@ -5,10 +5,10 @@
  */
 package groupage;
 
-
 import java.util.Arrays;
 
 /**
+ * Groups age array into 3 different arrays based on age
  *
  * @author Chris
  */
@@ -23,7 +23,7 @@ public class GroupAge {
         int majageCount = 0;
         int senageCount = 0;
 
-        int minNum = 0;
+        int minIndex = 0;
         int majNum = 0;
         int senNum = 0;
 
@@ -50,48 +50,27 @@ public class GroupAge {
         int senAge[] = new int[senageCount];
 
         for (int i = 0; i < age.length; i++) {
-            int count = 0;
-            System.out.println(Arrays.toString(age));
+
             if (age[i] < 18) {
 
-                minAge[minNum] = age[i];
-                minNum++;
+                minAge[minIndex++] = age[i];
+
+            } else if (age[i] >= 18 && age[i] < 65) {
+
+                majAge[majNum++] = age[i];
+
+            } else {
+
+                senAge[senNum++] = age[i];
 
             }
 
-            System.out.println(Arrays.toString(minAge));
-
         }
+        System.out.println(Arrays.toString(age));
 
-        for (int i = 0; i < age.length; i++) {
-            int count = 0;
-            System.out.println(Arrays.toString(age));
-            if (age[i] >= 18 && age[i] < 65) {
-
-                majAge[majNum] = age[i];
-                majNum++;
-
-            }
-
-            System.out.println(Arrays.toString(majAge));
-
-        }
-
-        for (int i = 0; i < age.length; i++) {
-            int count = 0;
-            System.out.println(Arrays.toString(age));
-            if (age[i] >= 65) {
-
-                senAge[senNum] = age[i];
-                senNum++;
-
-            }
-
-            System.out.println(Arrays.toString(senAge));
-
-        }
-
-        //System.out.println(minageCount + " " + majageCount + " " + senageCount + " " + Arrays.toString(minAge));
+        System.out.println(Arrays.toString(minAge));
+        System.out.println(Arrays.toString(majAge));
+        System.out.println(Arrays.toString(senAge));
     }
 
 }

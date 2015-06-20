@@ -6,7 +6,7 @@
 package minmaxarray;
 
 /**
- *
+ *Finds the youngest age and oldest age in an array
  * @author Chris
  */
 public class MinMaxArray {

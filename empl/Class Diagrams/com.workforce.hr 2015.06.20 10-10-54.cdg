@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="com.workforce.hr">
+  <ClassDiagramComponents>
+    <Class name="Department" package="com.workforce.hr" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="employee" type="Employee" visibility="private"/>
+        <Field name="managers" type="Manager" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calculateBonuses" returnType="void" visibility="public"/>
+        <Method name="calculateVacationDays" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="com.workforce.hr" visibility="public" xPosition="298.0" yPosition="143.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="gender" type="char" visibility="private"/>
+        <Field name="firstName" type="String" visibility="private"/>
+        <Field name="lastName" type="String" visibility="private"/>
+        <Field name="dateOfBirth" type="Date" visibility="private"/>
+        <Field name="hireDate" type="Date" visibility="private"/>
+        <Field name="title" type="String" visibility="private"/>
+        <Field name="salary" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calculateYearsOfExperience" returnType="int" visibility="public"/>
+        <Method name="calculateAge" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Manager" package="com.workforce.hr" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="reports" type="ArrayList" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addEmployee" returnType="void" visibility="public">
+          <Argument type="int" name="employeeId"/>
+        </Method>
+        <Method name="removeEmployee" returnType="void" visibility="public">
+          <Argument type="int" name="employeeId"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="employee" source="com.workforce.hr.Department" target="com.workforce.hr.Employee" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="managers" source="com.workforce.hr.Department" target="com.workforce.hr.Manager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.workforce.hr.Manager" target="com.workforce.hr.Employee"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

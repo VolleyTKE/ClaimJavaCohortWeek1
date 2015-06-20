@@ -8,7 +8,7 @@ package capitalizefirstletter;
 import java.util.Arrays;
 
 /**
- *
+ * Capitalize the first letter of every word in a sentence
  * @author Chris
  */
 public class CapitalizeFirstLetter {
